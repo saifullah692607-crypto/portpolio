@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saifullah - Web Developer & Tech Portfolio</title>
+  <style>
+    /* BASE STYLES */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #0f172a;
+      color: #f8fafc;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #38bdf8;
+    }
+    header p {
+      color: #94a3b8;
+      font-size: 1.1rem;
+    }
+
+    /* TOP SECTION: EMBEDDED VIDEO */
+    .video-section {
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+    .video-section h2 {
+      margin-bottom: 15px;
+      color: #f1f5f9;
+      font-size: 1.3rem;
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* BOTTOM SECTION: THREE TECH CARDS */
+    .cards-container {
+      display: flex;
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+    .card {
+      flex: 1;
+      min-width: 280px;
+      background: #1e293b;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #334155;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 20px;
+    }
+    .card-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #38bdf8;
+    }
+    .card-desc {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+    .read-btn {
+      padding: 8px 16px;
+      background: transparent;
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .read-btn:hover {
+      background: #38bdf8;
+      color: #0f172a;
+    }
+    .extra-info {
+      display: none;
+      margin-top: 15px;
+      padding-top: 10px;
+      border-top: 1px dashed #475569;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Saifullah's Tech Portfolio</h1>
+    <p>Front-End Web Development & Computer Hardware Overview</p>
+  </header>
+
+  <!-- TOP SECTION: REAL YOUTUBE VIDEO EMBED -->
+  <section class="video-section">
+    <h2>💻 Computer Hardware & Software Architecture (20-Minute Masterclass)</h2>
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/HB4I2CgkcCo" 
+        title="Computer Hardware vs Software" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- BOTTOM SECTION: THREE CARDS WITH REAL IMAGES -->
+  <div class="cards-container">
+    
+    <!-- CARD 1: HTML5 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600&auto=format&fit=crop" alt="HTML5 Code" class="card-img">
+      <div class="card-content">
+        <h3 class="card-title">1. HTML5 Structure</h3>
+        <p class="card-desc">
+          HTML5 provides the foundation of web development. It defines semantic structural tags like headers, sections, navigation bars, forms, and video wrappers.
+        </p>
+        <button class="read-btn" onclick="toggleInfo('htmlInfo')">Learn More</button>
+        <div id="htmlInfo" class="extra-info">
+          I use HTML5 to structure clean layouts, embed responsive media, and ensure strong accessibility standards across devices.
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2: CSS3 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&auto=format&fit=crop" alt="CSS3 Styling" class="card-img">
+      <div class="card-content">
+        <h3 class="card-title">2. CSS3 Styling</h3>
+        <p class="card-desc">
+          CSS controls visual aesthetics, layout positioning, colors, typography, Flexbox grids, and responsive design for screens of all sizes.
+        </p>
+        <button class="read-btn" onclick="toggleInfo('cssInfo')">Learn More</button>
+        <div id="cssInfo" class="extra-info">
+          I specialize in mobile-responsive design, custom CSS themes, hover animations, and smooth UI transitions.
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3: JAVASCRIPT -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=600&auto=format&fit=crop" alt="JavaScript Code" class="card-img">
+      <div class="card-content">
+        <h3 class="card-title">3. JavaScript Logic</h3>
+        <p class="card-desc">
+          JavaScript adds interactivity to pages—enabling dynamic modals, DOM manipulation, form validations, and click events.
+        </p>
+        <button class="read-btn" onclick="toggleInfo('jsInfo')">Learn More</button>
+        <div id="jsInfo" class="extra-info">
+          I build practical JS features like dynamic alert banners, interactive card toggles, and stateful web applications.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    function toggleInfo(infoId) {
+      const targetBox = document.getElementById(infoId);
+      if (targetBox.style.display === "block") {
+        targetBox.style.display = "none";
+      } else {
+        targetBox.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
